@@ -67,3 +67,33 @@
                     // , : para nosotros poder ingresar variables (una seguida de la otra), debemos utilizar la --> , <-- ya que esta misma le dirá a JavaScript que queremos seguir escribiendo/declarando características a nuestro objeto. Para dar por terminada nuestra sentencia, simplemente en la ultima característica de nuestro objeto, ya NO escribimos la --> , <-- 
 
                     // línea a línea : Nuestras características de nuestro objeto deben de ser escritas 1 línea por cada característica que tenga nuestro objeto. (Son buenas prácticas)
+
+//Tipos de variables:
+    //En JavaScript tenemos 3 formas de declarar variables, estas son:
+        // VAR
+            //La forma de declarar variables con la keyword var* es de la época de ECMAScript 5 (JavaScript), durante el primer JavaScript. Sin embargo el primer JavaScript resulto ser un total fracaso ya que presentaba muchos errores y bugs. La keyword var* es de esa época, es por eso mismo que esta también presenta ciertos errores de sintaxis o algunos bugs.
+            //2 errores/cosas extrañas/bugs que tiene la manera de declarar nuestras variables con var* son:
+
+                //Utilizar una variable sin haberla declarado antes:
+                    console.log(hola)
+                    var hola = "hola mundo"
+                    //El que nos deje hacer esta clase de cosas es algo bastante preocupante, ya que se nos podrían dar bastantes bugs o errores al momento de ejecutar nuestro código.
+                //SCOPES
+                    //En var*, al momento de nosotros declarar una variable dentro de un if*, podemos utilizar esa variable fuera del if*. Esto es algo que tarde o temprano hará que nuestro código tenga bastantes errores o no sea muy fácil de leer.
+        
+        // LET
+            //La forma de declarar variables con la keyword let* se creo a partir de los problemas que daba su antecesora (var*). let* salió a la luz en el ECMAScript 6, con unas reglas completamente distintas y para REMPLAZAR de manera definitiva a var*.
+                //Cosas que la let*:
+                    
+                    //Utilizar la variable sin haberla declara antes:
+                        //El utilizar las variables sin haberlas declara antes, era algo bastante contraproducente. Esto con let* se ha corregido:
+                            let frase = "hola mundo"
+                            console.log(frase)
+                    //SCOPES
+                        //En let*, si nosotros tenemos un if* y dentro de este, declaramos una variable, únicamente podremos utilizarlo dentro de esos corchetes del if*.
+
+        // CONST 
+            //La forma de declarar variables con la keyword const* es "la mejor forma de declarar nuestras variables". Lo que hace a const especial es que al momento de nosotros declarar una variable con el operador =, ya no podremos nuevamente colocar otro =. Ejm:
+                const x = 11;
+                x = 2;
+                //Lo recomendable es utilizar const, ya que como este no nos permitirá cambiar lo que hay dentro de esta.

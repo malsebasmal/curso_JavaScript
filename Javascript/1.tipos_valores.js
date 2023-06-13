@@ -23,10 +23,11 @@
                 null
                 undefined
 
+
     //Valores tipo objetos:
         //Arrays
             //Los valores arrays no son más que un conjunto de valores primitivos (en su mayoría) dentro de un par de []. Se declara así:
-                ["hola mundo"]
+                ["hola mundo", "qlq"]
                 [1, 2, 3.4]
                 [true]
                 [undefined]
@@ -37,3 +38,5 @@
                 {numeros: 1, 2, 3, 4.5}
                 {faltante: null}
                 {verdadero: true}
+
+//Para nosotros poder verificar lo que es cada tipo de valor, podemos ir a la consola de chrome (o nuestro navegador preferido) y utilizar la palabra reservada (keywords) typeof* escribimos el tipo de valor.
