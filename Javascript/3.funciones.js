@@ -52,6 +52,8 @@
                         alert(resultado_let);
                         //En este caso unicamente sería necesario llamar a nuestra función, ya que la suma la hará con los valores por defecto que tienen nuestros parámetros.
 
+        //QUE ES EL HOISTING
+            //El hoisting es https://www.youtube.com/watch?v=uI6o97A4IrI
 
     //Ejm de los 2 tipos de variables:
         //Declarativas
