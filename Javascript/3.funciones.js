@@ -11,12 +11,14 @@
                 saludo();
 
         //Expresión/Anónimas*
-            //Las funciones de expresión o también llamadas funciones anónimas, son funciones sin un nombre*, ya que el "nombre" que llegan a tener es gracias a que las funciones anónimas van dentro de una variable, así:
+            //Las funciones de expresión o también llamadas funciones anónimas, son funciones sin un nombre*, ya que el "nombre" que llegan a tener es gracias a que las funciones anónimas van dentro* de una variable*, así:
                 let numero_suerte = function() {
                     return 11
                 }
 
                 numero_suerte();
+                //En este caso nosotros estaríamos llamando a la variable* numero_suerte(), que si bien se invoca al igual que una función (osea con los 2 ()*), en sí es una variable*, donde el tipo de dato que esta guardando es de tipo función.
+
 
         //PARA QUE SIRVE LA KEYWORD RETURN*        
             //la keyword return* sirve para retornar un valor de nuestra función. Nos retorna algo de nuestra función.
@@ -53,6 +55,12 @@
                         alert(resultado)
                         //En este caso unicamente sería necesario llamar a nuestra función, ya que la suma la hará con los valores por defecto que tienen nuestros parámetros.
 
-    //Ejm de los 2 tipos de variables:
-        
 
+    //Ejm de los 2 tipos de variables:
+        //Declarativas
+        function saludo(saludar) {
+            return saludar
+        }
+        
+        alert(saludo("buenos días"))
+        //En este caso estamos "invocando" a la función saludo() dentro de un alert() donde este anterior nos va imprimir en pantalla nuestra función

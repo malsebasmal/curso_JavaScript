@@ -1,10 +1,7 @@
-
-
-
-
-function saludo() {
-    return "hola amig@s"
+function saludo(saludar = "buenos días") {
+    return saludar
 }
-let frase = saludo();
-saludo();
-alert(frase)
+
+const recibido = saludo()
+
+alert(recibido)
