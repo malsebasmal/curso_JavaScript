@@ -70,6 +70,7 @@
 
 //Tipos de variables:
     //En JavaScript tenemos 3 formas de declarar variables, estas son:
+    //https://www.youtube.com/watch?v=bvkY9ey83yY
         // VAR
             //La forma de declarar variables con la keyword var* es de la época de ECMAScript 5 (JavaScript), durante el primer JavaScript. Sin embargo el primer JavaScript resulto ser un total fracaso ya que presentaba muchos errores y bugs. La keyword var* es de esa época, es por eso mismo que esta también presenta ciertos errores de sintaxis o algunos bugs.
             //2 errores/cosas extrañas/bugs que tiene la manera de declarar nuestras variables con var* son:
@@ -96,4 +97,4 @@
             //La forma de declarar variables con la keyword const* es "la mejor forma de declarar nuestras variables". Lo que hace a const especial es que al momento de nosotros declarar una variable con el operador =, ya no podremos nuevamente colocar otro =. Ejm:
                 const x = 11;
                 x = 2;
-                //Lo recomendable es utilizar const, ya que como este no nos permitirá cambiar lo que hay dentro de esta.
+                //Lo recomendable es utilizar const, ya que como este no nos permitirá cambiar (re-asignar) lo que hay dentro de esta.
