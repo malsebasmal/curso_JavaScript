@@ -1,4 +1,5 @@
 //Scope
+    // https://www.youtube.com/watch?v=s-7C09ymzK8
     //El scope* no es más que el alcance que puede llegar a tener una variable dentro de lo que estamos programando. 
     //En otras palabras, es saber que variables se encuentran delimitadas a poder utilizarlas.
         //Existen 2 tipos de SCOPE*:
@@ -22,12 +23,4 @@
                     //En este ejemplo, nosotros estamos llamando a una variable de nombre decisión*, la cual se encuentra dentro de jugar(). Se "supone" que tendría que salir el mensaje "si juego", no?.
                     //Pues NO SUCEDERÁ. Esto se debe a que hemos mandado a imprimir una variable*, la cual esta dentro de una función; es decir, dentro de un SCOPE LOCAL.
                     //Entonces:
-                        //Podemos mandar a llamar cualquier cosa que este dentro del SCOPE GLOBAL*, PERO, NO PODEMOS mandar a llamar algo que este dentro de un SCOPE LOCAL*
-                        //Si es que queremos saber como podría imprimirnos el contenido de nuestra variable decisión, es tan simple como:
-                            let juego = "Clash royal"
-                            function jugar (decisión = "si juego") {
-                                return juego + decisión
-                                alert()
-                            };
-                            
-                            jugar();
+                        //Podemos mandar a llamar cualquier cosa que este en el SCOPE GLOBAL*, PERO, NO PODEMOS mandar a llamar algo que este en el SCOPE LOCAL*, únicamente podemos llamar cosas de nuestro SCOPE LOCAL, dentro de nuestro mismo SCOPE LOCAL*
