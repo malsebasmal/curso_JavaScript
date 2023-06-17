@@ -43,18 +43,18 @@
         //Comparación
             //Los operadores de comparación, como su mismo nombre indica, compara dos o más valores entre si, y devuelven como respuesta un valor de tipo lógico (true o false).
                 3 == "3"
-                //El operador de comparación == lo que hace es es comparar si el valor es el mismo, pero literalmente el mismo. Como el ejemplo que vimos arriba. Un ejemplo para entenderlo mejor sería:
-                    4 == 5
-                    //Aquí nosotros supondríamos que nos saldría un true, dado a que son los mismos tipo de valor, no?... Pues no, ya que el operador == , únicamente compara lo el valor "literal" (por decirlo de alguna manera) si es igual a su anterior. Para que nos saliese true*, tendríamos que escribirlo así:
-                        4 == 4
-                        "hola" == "hola" //true
-                        "hola" == "Antonio" //false
-                        true == 1 //true
-                        true == "1" //true
-                        true == "hola" //false
-                        false == "" //true
-                        false == "0" //true
-                        false == 0 //true
+                    //El operador de comparación == lo que hace es es comparar si el valor es el mismo, pero literalmente el mismo. Como el ejemplo que vimos arriba. Un ejemplo para entenderlo mejor sería:
+                        4 == 5
+                        //Aquí nosotros supondríamos que nos saldría un true, dado a que son los mismos tipo de valor, no?... Pues no, ya que el operador == , únicamente compara lo el valor "literal" (por decirlo de alguna manera) si es igual a su anterior. Para que nos saliese true*, tendríamos que escribirlo así:
+                            4 == 4
+                            "hola" == "hola" //true
+                            "hola" == "Antonio" //false
+                            true == 1 //true
+                            true == "1" //true
+                            true == "hola" //false
+                            false == "" //true
+                            false == "0" //true
+                            false == 0 //true
                 3 === "3"
                     //El operador de comparación === , es algo parecido a su antecesor nombrado, este compara el tipo* de valor y también si el valor que contiene es el mismo. En ejemplo de arriba, nos saldría false*, ya que no es lo mismo valor de tipo number, que un valor de tipo string, pero también nos saldrá false incluso si llegásemos a poner otro valor de tipo número que no sea el mismo valor que hemos escrito anteriormente. Ejemplo
                         3 === 5
@@ -66,4 +66,46 @@
                                 false === false //true
                                 false === "" //false
                                 false === 0 //false
-                //Cabe recalcar que los operadores de 
+                != , !==
+                    //Estos son los operadores de desigualdad. Los operadores = con un signo de ! adelante atrás de ellos, en vez de validar si es que son iguales los valores o tipos y valor, buscará si es que estos son distintos.
+                        //Desigualdad
+                            "3" != 3 // false
+                            3 != 3 // false
+
+                        // Desigualdad estricta
+                            "3" !== 3 // true
+                            3 !== 3 // false
+                //Cabe recalcar que los operadores de comparación también pueden ser combinados, ejemplos:
+                    5 < 3
+                    //En este caso estamos "preguntando" si *5 es menor que 3*, pero también podemos ponerle un igual, para "preguntar" si es *5 es igual o menor que 3*, así:
+                        5 <= 3
+                        //Aquí estamos "preguntando" si es que 5 es menor o igual que 3.
+                    //Podemos hacer esto con los demás operadores
+                        5 > 3
+                        5 >= 3
+                        5 <= 3
+                        5 < 3
+        //Lógicos 
+            //Los operadores lógicos, son aquellos que únicamente comparan dos o más expresiones y devuelve un valor lógico (verdadero o falso). Las expresiones son comparaciones entre valores, se utiliza en conjunto con los operadores de comparación. En otras palabras, este nos ayuda a validar variables/valores entre si. Para entenderlo mejor tenemos que entender que existen 3 tipos de operadores lógicos.
+                //Operador disyunción lógico
+                    a && b
+                        //El operador --> && <-- lo que hace es: Si a es true y b es true, la condición se cumplirá, de caso contrario, no se cumplirá. Ejemplo:
+                            var a = 15
+                            var b = 5
+                            
+                            (a >= 10) && (a <= 20) // true
+                            (b >= 10) && (b <= 20) // false
+                                //Con el operador && solamente se podrá ejecutar/cumplir nuestra condición si ambas expresiones/valores/variables son true*, si es que hay un *false y true* (viceversa) nos arrojará que no es posible ejecutar la condición.
+                    a || b
+                        //El operador --> || <-- lo que hace es: Como su hermana (&&) únicamente cumple la condición si ambos valores/variables/expresiones son true*, este mismo lo hace es ejecutar la condición si ambos o un valor es true*. Ejemplo
+                            var a = 15
+                            var b = 5
+                            
+                            (a <= 10) || (a >= 20) // false
+                            (b <= 10) || (b >= 20) // true
+                    !
+                        //El operador de negación o NOT (!) devuelve el valor lógico contrario a la expresión. Se lee de la siguiente manera: “La expresión es verdadero, entonces es falso”.
+                            var a = 5
+
+                            !(a < 0) // true
+                                //También se puede escribir únicamente a > 0, sin embargo, es únicamente para entender el propósito del operador de negación.
