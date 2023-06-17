@@ -89,7 +89,7 @@
             //Los operadores lógicos, son aquellos que únicamente comparan dos o más expresiones y devuelve un valor lógico (verdadero o falso). Las expresiones son comparaciones entre valores, se utiliza en conjunto con los operadores de comparación. En otras palabras, este nos ayuda a validar variables/valores entre si. Para entenderlo mejor tenemos que entender que existen 3 tipos de operadores lógicos.
                 //Operador disyunción lógico
                     a && b
-                        //El operador --> && <-- lo que hace es: Si a es true y b es true, la condición se cumplirá, de caso contrario, no se cumplirá. Ejemplo:
+                        //El operador --> && (AND) <-- lo que hace es: Si a es true y b es true, la condición se cumplirá, de caso contrario, no se cumplirá. Ejemplo:
                             var a = 15
                             var b = 5
                             
@@ -97,15 +97,36 @@
                             (b >= 10) && (b <= 20) // false
                                 //Con el operador && solamente se podrá ejecutar/cumplir nuestra condición si ambas expresiones/valores/variables son true*, si es que hay un *false y true* (viceversa) nos arrojará que no es posible ejecutar la condición.
                     a || b
-                        //El operador --> || <-- lo que hace es: Como su hermana (&&) únicamente cumple la condición si ambos valores/variables/expresiones son true*, este mismo lo hace es ejecutar la condición si ambos o un valor es true*. Ejemplo
+                        //El operador --> || <-- lo que hace es: Es algo distinta a su hermana (&&), en este operador (OR) la condición se cumple únicamente con valores/variables/expresiones sea true*. Bajo ese punto, el condicional ||* solamente necesita que un valor sea true* para poder ejecutar la instrucción. Ejemplo:
                             var a = 15
                             var b = 5
                             
-                            (a <= 10) || (a >= 20) // false
-                            (b <= 10) || (b >= 20) // true
+                            (a <= 10) || (a >= 20) // false ya que aquí, ninguna de las 2 condiciones se cumplía
+                            (b <= 10) || (b >= 20) // true, ya que aquí, si se cumplía la condición de b <= 10
                     !
                         //El operador de negación o NOT (!) devuelve el valor lógico contrario a la expresión. Se lee de la siguiente manera: “La expresión es verdadero, entonces es falso”.
                             var a = 5
 
                             !(a < 0) // true
                                 //También se puede escribir únicamente a > 0, sin embargo, es únicamente para entender el propósito del operador de negación.
+                    condition ? true : false;
+                        //Esta condicional es como un if else, solo que en una sola línea de código.
+                            //condition = Es igual a nuestra condición* o variable*
+                            //? = Es igual a cerrar la sentencia de nuestra condición
+                            //true = Es igual a si* la condición se cumple* pasa esto
+                            //false = Es igual a si no* se cumple la condición* pasa esto otro
+                        //Ejemplos para entenderlo mejor.
+                            function validación() {
+                                let promptEdad = prompt("Para darte tu licencia de conducir, necesito saber: cuantos años tienes?");
+                                let edad = parseInt(promptEdad, 10);
+                                let confirmar = edad >= 18 && edad <= 49 ? "Puedes conducir" : "No puedes conducir" //Esta es nuestra condicional if else* escrito en una sola línea de código
+                                alert(confirmar)
+                            };
+                            validación();
+                                //En este función validación ocurren estas cosas:
+                                    //Tenemos una variable llamada promptEdad*, la cual esta almacenando* los datos que escriba el usuario* en nuestro prompt*.
+                                    //Seguido a este, tenemos otra variable llamada edad*, la cual transforma nuestros valores escritos en el prompt (recordando que son strings) a valores de tipo number, esto con la keyword parseInt* y como segundo parámetro le ponemos el número 10*, el cual lo utilizara como base para que nuestros números solamente sean transformados a este (o sea, a números redondos).
+                                    //Por ultimo ponemos nuestra condicional que esta guardada dentro de una variable llamada confirmar*, hemos puesto que:
+                                        //Si la variable edad* es >mayor o =igual a 18 "Puede conducir", y como un "límite" hemos puesto (anidando con el operador && AND) que si la variable edad* es <menor o =igual a 49 "No podrá conducir".
+                                    //Llamamos a nuestra condicional confirmar* con un alert* dentro de nuestra función validación*
+                                    //Finalizamos "invocando" a nuestra función validación*
