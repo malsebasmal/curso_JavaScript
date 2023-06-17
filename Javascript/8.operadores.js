@@ -109,24 +109,3 @@
 
                             !(a < 0) // true
                                 //También se puede escribir únicamente a > 0, sin embargo, es únicamente para entender el propósito del operador de negación.
-                    condition ? true : false;
-                        //Esta condicional es como un if else, solo que en una sola línea de código.
-                            //condition = Es igual a nuestra condición* o variable*
-                            //? = Es igual a cerrar la sentencia de nuestra condición
-                            //true = Es igual a si* la condición se cumple* pasa esto
-                            //false = Es igual a si no* se cumple la condición* pasa esto otro
-                        //Ejemplos para entenderlo mejor.
-                            function validación() {
-                                let promptEdad = prompt("Para darte tu licencia de conducir, necesito saber: cuantos años tienes?");
-                                let edad = parseInt(promptEdad, 10);
-                                let confirmar = edad >= 18 && edad <= 49 ? "Puedes conducir" : "No puedes conducir" //Esta es nuestra condicional if else* escrito en una sola línea de código
-                                alert(confirmar)
-                            };
-                            validación();
-                                //En este función validación ocurren estas cosas:
-                                    //Tenemos una variable llamada promptEdad*, la cual esta almacenando* los datos que escriba el usuario* en nuestro prompt*.
-                                    //Seguido a este, tenemos otra variable llamada edad*, la cual transforma nuestros valores escritos en el prompt (recordando que son strings) a valores de tipo number, esto con la keyword parseInt* y como segundo parámetro le ponemos el número 10*, el cual lo utilizara como base para que nuestros números solamente sean transformados a este (o sea, a números redondos).
-                                    //Por ultimo ponemos nuestra condicional que esta guardada dentro de una variable llamada confirmar*, hemos puesto que:
-                                        //Si la variable edad* es >mayor o =igual a 18 "Puede conducir", y como un "límite" hemos puesto (anidando con el operador && AND) que si la variable edad* es <menor o =igual a 49 "No podrá conducir".
-                                    //Llamamos a nuestra condicional confirmar* con un alert* dentro de nuestra función validación*
-                                    //Finalizamos "invocando" a nuestra función validación*
