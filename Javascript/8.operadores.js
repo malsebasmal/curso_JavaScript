@@ -103,6 +103,8 @@
                             
                             (a <= 10) || (a >= 20) // false ya que aquí, ninguna de las 2 condiciones se cumplía
                             (b <= 10) || (b >= 20) // true, ya que aquí, si se cumplía la condición de b <= 10
+                    a ?? b 
+                        //El operador --> ?? <-- retorna el valor utilizado en el lado derecho de la expresión cuando el lado izquierdo es null o undefined , en caso contrario, retorna el lado izquierdo.
                     !
                         //El operador de negación o NOT (!) devuelve el valor lógico contrario a la expresión. Se lee de la siguiente manera: “La expresión es verdadero, entonces es falso”.
                             var a = 5
