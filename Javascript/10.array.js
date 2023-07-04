@@ -40,7 +40,7 @@
                 let meterMasValores = bolsa_DeCompras.push("pepinos-de-otra-forma")
         //Para quitar elementos de nuestro array, se hace de la siguiente manera:
             let quitarValores = bolsa_DeCompras.pop(3)
-        //Como sabemos, con el .pop, agregamos más valores, sin embargo estos se van hasta el último. Para nosotros agregar más valores a nuestro array pero que vayan al principio*, podemos utilizar el .unshift*, se hace de la siguiente manera:
+        //Como sabemos, con el .push, agregamos más valores, sin embargo estos se van hasta el último. Para nosotros agregar más valores a nuestro array pero que vayan al principio*, podemos utilizar el .unshift*, se hace de la siguiente manera:
             let meterMasValoresPrincipio = bolsa_DeCompras.unshift("presidente de los estados unidos")
         //Asu vez, para borrar el elemento del principio (ya que con pop, unicamente se elimina nuestro ÚLTIMO elemento), se hace de la siguiente manera:
             let quitarMasValoresPrincipio = bolsa_DeCompras.shift()

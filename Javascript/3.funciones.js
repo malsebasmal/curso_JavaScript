@@ -87,4 +87,11 @@
                         console.log(mensaje);
                         //En el ejemplo anterior, la cadena de texto se define utilizando comillas invertidas (``). Dentro de la cadena, ${nombre} y ${edad} son expresiones que se evalúan y se sustituyen por sus respectivos valores. El resultado será: "Hola, mi nombre es Juan y tengo 30 años.".
         //Anónimas
-            //
+            const nombreDeLaFuncionAnonima = function (nombre) {
+                alert(nombre);
+            }
+
+            nombreDeLaFuncionAnonima("antonio")
+                //En este caso el nombre de la función, estaría siendo "referenciado o representado" por el nombre de nuestra variable, la cual es nombreDeLaFuncion*.
+        //Flecha/Row
+            
