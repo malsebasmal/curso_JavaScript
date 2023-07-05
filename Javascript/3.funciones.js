@@ -94,4 +94,19 @@
             nombreDeLaFuncionAnonima("antonio")
                 //En este caso el nombre de la función, estaría siendo "referenciado o representado" por el nombre de nuestra variable, la cual es nombreDeLaFuncion*.
         //Flecha/Row
-            
+            //Las arrows functions, son funciones con una declaración más "sencilla". Su sintaxis simple, hace que sea bastante fácil de leer.
+                const suma = () => {
+                    let x = Number(prompt("Inserte un número:"));
+                    let y = Math.floor(Math.random() * 11);
+                    let resultado = x + y;
+                    console.log("Este es el resultado: " + resultado)
+                };
+
+                suma();
+                //Cosas ha resaltar de la arrows functions :
+                    //Podemos NO utilizar los () ni tampoco {}.
+                        //Si es que solo tenemos un parámetro, podemos saltarnos el usar ()
+                        //Si es que solo tenemos 1 linea de código para ejecutar, podemos saltarnos el usar {}
+                    //El valor this
+                        //El valor de this está determinado por el contexto léxico, es decir, por el ámbito en el que se definió la función.
+                        //Cuando se utiliza una arrow function, this se hereda del contexto en el que se encuentra la función. En otras palabras, this dentro de una arrow function hace referencia al valor de this en el ámbito exterior a la función. Esto es diferente del comportamiento de this en las funciones tradicionales, donde su valor es dinámico y se establece en tiempo de ejecución en función de cómo se invoca la función.
