@@ -8,5 +8,6 @@
         "reasignarle",
         "reutilizable",
         "tipado"
-    ]
+    ],
+    "editor.guides.bracketPairs": true
 }
