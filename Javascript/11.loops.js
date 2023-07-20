@@ -26,7 +26,7 @@
                                 //Todo eso anterior era únicamente nuestra "condition" o "instrucción" de nuestro ciclo for*, dentro de este escribimos el nombre de nuestra función o variable, y mandamos a llamar (función) o guardamos (variable) nuestro array con la variable index* que declaramos anteriormente*.
                     //En nuestro ciclo for* dentro de nuestro parámetro de control (que esta dentro de unos paréntesis) tenemos la variable index, la cual primeramente tiene como valor el número 0, separado a este hemos puesto que index ES MENOR A*  el número entregado de nuestra longitud de nuestro array y al final colocamos que el valor de index se vaya incrementando de a 1.
                     //Dentro de nuestro ciclo for* ya llamamos la función o variable a querer hacer que sea un bucle, así:
-                            //Función
+                        //Función
                             imprimirNombresEnPantalla(estudiantesEnSala[index])
                         //Variable
                             const imprimir = estudiantesEnSala[index]
@@ -43,8 +43,8 @@
                     //sintaxis legible.
                     //Podemos utilizar el continue* y break*
         //for of        
-            for (const index of estudiantesEnSala) {
-                console.log(estudiantesEnSala[index]);
+            for (const iterator of estudiantesEnSala) {
+                console.log(estudiantesEnSala[iterator]);
             };
             //El bucle for-of*, a comparación del bucle for-in* y for*, no necesita un iterator*, si no que más bien utiliza la "singularidad" de nuestro array*, esto debido a que un array es algo en "plural" (porque contiene varios elementos).
                 //depende:

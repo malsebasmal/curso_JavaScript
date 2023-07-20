@@ -48,3 +48,59 @@
             let buscarValor = bolsa_DeCompras.indexOf("martes") //dentro de los paréntesis, ponemos el nombre/valor de nuestro elemento.
         
         typeof bolsa_DeCompras //sirve para saber que tipo de valor es o contiene nuestra variable o valor.
+
+    //Más cosas que podemos hacer con los arrays:
+        //Crearemos un array de ejemplo con objetos literales dentro de este:
+            const viveres = [
+                {nombre: "manzana", precio: 15},
+                {nombre: "pera", precio: 16},
+                {nombre: "platano", precio: 10},
+                {nombre: "mango", precio: 25},
+                {nombre: "uvas", precio: 25},
+                {nombre: "pan", precio: 17},
+                {nombre: "keke", precio: 19}
+            ];
+            //
+
+            //Filtrar cosas dentro de un array:
+                //.filter
+                    let viveresFiltrados = viveres.filter(function(vivere) {
+                        return vivere.precio <= 10
+                    });
+                    console.log(viveresFiltrados)
+                        //Cabe recalcar que con el .filter nuestro array principal NO SE MODIFICA. El .filter crea otro array donde colocará lo que estamos filtrando.
+            //Buscar dentro de un array:
+                //.find
+                    let viveresBuscar = viveres.find(function(buscar){
+                        return buscar.nombre == "manzana"
+                    });
+                    console.log(viveresBuscar);
+                        //.find (a comparación de .filter) no crea un nuevo array donde coloca nuestros elementos buscados, si no que ÚNICAMENTE DEVUELVE EL PRIMER VALOR que cumpla la condición.
+            //Buscar la POSICIÓN de un valor en nuestro array:
+                //.findIndex
+                    let viveresPosicion = viveres.findIndex(function(posicion){
+                        return posicion.nombre === "manzana"
+                    })
+                        //El .findIndex (a comparación de indexOf) busca dentro del mismo array u otros valor de tipo objeto, cosa que con el indexOf no se puede hacer, ya que únicamente permite buscar con valores primitivos. El .findIndex (al igual que .find) ÚNICAMENTE DEVUELVE EL PRIMER VALOR que cumpla con la condición.
+            //Rellenar/Cambiar TODOS los valores de un array:
+                //.fill
+                    let viveresRellenar = viveres.fill("hola")
+                    console.log(viveresRellenar)
+                        //El .fill cambia TODOS los elementos dentro de nuestro array. Sin embargo solamente cambia por valores primitivos, si quisiéramos hacerlo por un valor de tipo objeto, tendríamos que crear un objeto que sea con el que utilizaremos el fill.
+                            let relleno = {nombre: "pan", precio: 12}
+            //Verificar
+                //.every || .some
+                    //.every
+                        //El .every únicamente devolverá true* cuando TODOS los valores del array cumplan la condición indicada, de lo contrario, votará false*
+                            let viveresConfirmacionEvery = viveres.every(confirmacion => confirmacion.precio <= 10)
+                            console.log(viveresConfirmacionEvery)
+                                //En este caso estamos diciendo que TODOS los valores en precio* tienen que ser mayores a 10 para que la condición se cumpla. Podríamos hacer otro ejemplo donde verifique si todos los valores son de tipo number
+                                    viveresConfirmacionEvery = viveres.every(confirmacion => typeof confirmacion.precio === 'number')
+                    //.some
+                        //El .some (al contrario que el .every) podrá devolver el true* si es que como MÍNIMO UN VALOR cumple con la condición indicada.
+                            let viveresConfirmacionSome = viveres.some(confirmacion => confirmacion.nombre === "manzana")
+                            console.log(viveresConfirmacionSome)
+                                //En este caso nos devolvería true*, ya que la condición si se cumple en un de los elementos del array. 
+            //Modificar y guardar en otro array
+                //.map
+                    let viveresModificarGuardar = viveres.map(modificador => modificador.nombre)
